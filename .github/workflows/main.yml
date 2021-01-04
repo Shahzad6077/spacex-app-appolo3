@@ -29,7 +29,7 @@ jobs:
 
       # Install Modules
       - name: Install Node-modules
-        run: npm Install
+        run: npm install
 
       # Make build
       - name: Make Build
