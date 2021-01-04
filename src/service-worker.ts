@@ -77,12 +77,13 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
   }
 });
-const listOfRestAPIS: Array<string> = ["//api.spacex.land/graphql/"];
+const listOfRestAPIS: Array<string> = ["api.spacex.land/graphql/"];
 // Any other custom service worker logic can go here.
 self.addEventListener("fetch", (event) => {
   const check: boolean = listOfRestAPIS.some((str) =>
     event.request.url.includes(str)
   );
+  console.log(event.request.url, "<-- PATH -->", check);
   if (check) {
     event.respondWith(
       caches.open("mysite-dynamic").then(function (cache) {
