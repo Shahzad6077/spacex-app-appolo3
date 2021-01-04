@@ -1,13 +1,35 @@
+@font-face {
+  font-family: "Chibold";
+  src: url("./Assets/Chibold.ttf") format("truetype");
+}
+:root {
+  --black: #392d40;
+  --lightblack: #222326;
+  --darkgray: #3b3d45;
+  --gray: #4e5267;
+
+  --smoke: #b8fcc6;
+  --blue: #5752af;
+  --red: ##e75353;
+  --white: #dbdcdf;
+  --yellow: #f6d586;
+
+  --grey: #41455a;
+  --grey1: #4c5166;
+  --grey2: #1a0036;
+  --grey2: #dfdfdf;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
