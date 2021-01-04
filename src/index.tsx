@@ -1,23 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import AppEnhancer from "./AppEnhancer";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { ThemeProvider } from "@material-ui/core";
 import theme from "./theme";
 import { BrowserRouter as Router } from "react-router-dom";
-import { ApolloProvider } from "@apollo/client";
-
-import gqlClient from "./Services/Graphql";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <ApolloProvider client={gqlClient}>
-        <ThemeProvider theme={theme}>
-          <App />
-        </ThemeProvider>
-      </ApolloProvider>
+      <ThemeProvider theme={theme}>
+        <AppEnhancer />
+      </ThemeProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

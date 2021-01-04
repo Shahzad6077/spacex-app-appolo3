@@ -79,26 +79,26 @@ self.addEventListener("message", (event) => {
 });
 const listOfRestAPIS: Array<string> = ["api.spacex.land/graphql/"];
 // Any other custom service worker logic can go here.
-self.addEventListener("fetch", (event) => {
-  const check: boolean = listOfRestAPIS.some((str) =>
-    event.request.url.includes(str)
-  );
-  console.log(event.request.url, "<-- PATH -->", check);
-  if (check) {
-    event.respondWith(
-      caches.open("mysite-dynamic").then(function (cache) {
-        return cache.match(event.request).then(function (response) {
-          return (
-            response ||
-            fetch(event.request).then(function (response) {
-              cache.put(event.request, response.clone());
-              return response;
-            })
-          );
-        });
-      })
-    );
-  } else {
-    // response to static files requests, Cache-First strategy
-  }
-});
+// self.addEventListener("fetch", (event) => {
+//   const check: boolean = listOfRestAPIS.some((str) =>
+//     event.request.url.includes(str)
+//   );
+//   console.log(event.request.url, "<-- PATH -->", check);
+//   if (check) {
+//     event.respondWith(
+//       caches.open("mysite-dynamic").then(function (cache) {
+//         return cache.match(event.request).then(function (response) {
+//           return (
+//             response ||
+//             fetch(event.request).then(function (response) {
+//               cache.put(event.request, response.clone());
+//               return response;
+//             })
+//           );
+//         });
+//       })
+//     );
+//   } else {
+//     // response to static files requests, Cache-First strategy
+//   }
+// });
