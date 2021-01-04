@@ -6,7 +6,7 @@ export const QUERY_LAUNCHES = gql`
       id
       launch_year
       links {
-        mission_patch_small
+        flickr_images
       }
       mission_name
     }

@@ -6,7 +6,9 @@ import { ReactComponent as RocketAI } from "./../../Assets/rocket.svg"
 const useStyles = makeStyles((theme) => ({
 
     txtWrapper: {
-
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
         "& h2": {
             letterSpacing: "4px",
             lineHeight: "max(2.3rem, min(6vw, 5.5rem))",
@@ -99,31 +101,29 @@ const Home: FC = () => {
     const classes = useStyles()
 
     return (
-        <Container maxWidth="lg">
-            <Grid container className={classes.gridWrapper}>
-                <Grid item xs={12} sm={7} className={classes.txtWrapper}>
-                    <Box marginTop="2rem">
-                        <Typography variant="h2">SPACE</Typography>
-                        <Typography variant="h2">FOR</Typography>
-                        <Typography variant="h2">EVERYONE</Typography>
-                    </Box>
-                    <Box className={classes.btnEx}>
-                        <Link to="spacex">
-                            <div>
-                                <span />
-                                <span />
-                            </div>
-                            <Typography variant="body2">
-                                Explore
+        <Grid container className={classes.gridWrapper}>
+            <Grid item xs={12} sm={5} className={classes.txtWrapper}>
+                <Box marginTop="2rem">
+                    <Typography variant="h2">SPACE</Typography>
+                    <Typography variant="h2">FOR</Typography>
+                    <Typography variant="h2">EVERYONE</Typography>
+                </Box>
+                <Box className={classes.btnEx}>
+                    <Link to="spacex">
+                        <div>
+                            <span />
+                            <span />
+                        </div>
+                        <Typography variant="body2">
+                            Explore
                         </Typography>
-                        </Link>
-                    </Box>
-                </Grid>
-                <Grid item xs={12} sm={5} className={classes.svgWrapper}>
-                    <RocketAI />
-                </Grid>
+                    </Link>
+                </Box>
             </Grid>
-        </Container>
+            <Grid item xs={12} sm={7} className={classes.svgWrapper}>
+                <RocketAI />
+            </Grid>
+        </Grid>
     )
 }
 

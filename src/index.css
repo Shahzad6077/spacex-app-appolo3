@@ -33,3 +33,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.scroll::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  background-color: var(--black);
+}
+
+.scroll::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: var(--yellow);
+  border: 2px solid transparent;
+}
+.scroll::-webkit-scrollbar-thumb :hover {
+  background-color: var(--blue) !important;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: var(--black);
+}
+
+::selection {
+  color: white;
+  background: var(--black);
+}

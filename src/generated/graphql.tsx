@@ -1352,7 +1352,7 @@ export type LaunchesDataQuery = (
     & Pick<Launch, 'id' | 'launch_year' | 'mission_name'>
     & { links?: Maybe<(
       { __typename?: 'LaunchLinks' }
-      & Pick<LaunchLinks, 'mission_patch_small'>
+      & Pick<LaunchLinks, 'flickr_images'>
     )> }
   )>>> }
 );
@@ -1411,7 +1411,7 @@ export const LaunchesDataDocument = gql`
     id
     launch_year
     links {
-      mission_patch_small
+      flickr_images
     }
     mission_name
   }
