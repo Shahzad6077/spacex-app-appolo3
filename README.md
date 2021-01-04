@@ -2,4 +2,4 @@
 
 ## `Check the below link to visit the app`
 
-Open [spacex-shahzad.surge.sh](https://spacex-shahzad.surge.sh/) to view it in the browser.
+Open [spacex-shahzad.surge.sh](https://spacex-shahzad.surge.sh/){:target="\_blank" rel="noopener"} to view it in the browser.
