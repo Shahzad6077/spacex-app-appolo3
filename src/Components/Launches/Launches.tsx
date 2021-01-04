@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
       overflowY: "scroll",
       height: "420px",
     },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "1rem",
+    },
   },
   gridList: {
     [theme.breakpoints.down("sm")]: {
@@ -89,7 +92,7 @@ const Launches: FC = () => {
   let gridListCols = 1;
 
   isMatchSmDown && (gridListCols = 2.5);
-  isMatchxSDown && (gridListCols = 4);
+  isMatchxSDown && (gridListCols = 1.5);
 
   return (
     <Grid
